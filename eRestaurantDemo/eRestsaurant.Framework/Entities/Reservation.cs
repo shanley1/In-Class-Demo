@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace eRestsaurant.Framework.Entities
+namespace eRestaurant.Framework.Entities
 {
     public class Reservation
     {

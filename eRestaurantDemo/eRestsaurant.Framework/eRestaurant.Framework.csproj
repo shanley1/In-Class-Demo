@@ -7,8 +7,8 @@
     <ProjectGuid>{66FC1437-37E6-4EFB-A552-D214DEC19C37}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>eRestsaurant.Framework</RootNamespace>
-    <AssemblyName>eRestsaurant.Framework</AssemblyName>
+    <RootNamespace>eRestaurant.Framework</RootNamespace>
+    <AssemblyName>eRestaurant.Framework</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

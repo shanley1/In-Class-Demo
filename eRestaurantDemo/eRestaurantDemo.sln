@@ -26,7 +26,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Website(1)", "http://localh
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eRestsaurant.Framework", "eRestsaurant.Framework\eRestsaurant.Framework.csproj", "{66FC1437-37E6-4EFB-A552-D214DEC19C37}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eRestaurant.Framework", "eRestsaurant.Framework\eRestaurant.Framework.csproj", "{66FC1437-37E6-4EFB-A552-D214DEC19C37}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

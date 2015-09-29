@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using eRestsaurant.Framework.DAL;
-using eRestsaurant.Framework.Entities;
+using eRestaurant.Framework.DAL;
+using eRestaurant.Framework.Entities;
 using System.ComponentModel; //needed for [DataObject] and related to attribute classes
 
-namespace eRestsaurant.Framework.BLL
+namespace eRestaurant.Framework.BLL
 {
     // Allows our class ot be "discovered" by the ObjectDataSource controls in our website
     [DataObject]

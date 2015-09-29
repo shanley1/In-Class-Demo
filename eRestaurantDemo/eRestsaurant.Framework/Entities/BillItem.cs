@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace eRestsaurant.Framework.Entities
+namespace eRestaurant.Framework.Entities
 {
     public class BillItem
     {
@@ -31,14 +31,7 @@ namespace eRestsaurant.Framework.Entities
 
         // Navigation Properties
         public virtual Bill Bill { get; set; }
-        public virtual Item Item { get; set; }
-
-        // PLACE Public virtual Icollection<BillItem> Items { get; set; } IN BILL NAV PROPERTIES
-        //and public DbSet<BillItem> BillItems { get; set; } in RESTARAUNTCONTEXT in DAL
-        // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-        
+        public virtual Item Item { get; set; }      
 
     }
 }
