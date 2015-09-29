@@ -19,5 +19,20 @@ namespace eRestsaurant.Framework.DAL
         // One Property for each Table/Entity in the database
         public DbSet<MenuCategory> MenuCategories {get;set;}
         public DbSet<Item> Items { get; set; }
+        public DbSet<Bill> Bills { get; set; }
+        public DbSet<BillItem> BillItems { get; set; }
+
+        // The property name must match the database title
+        public DbSet<Table> Tables { get; set; }
+        public DbSet<Waiter> Waiters { get; set; }
+        public DbSet<SpecialEvent> SpecialEvents { get; set; }
+        public DbSet<Reservation> Reservations { get; set; }
+
+        // For Customizing the model of our entities as we want them to match our database, we would put any details
+        // inside the following method
+        protected override void OnModelICreating(DbModelBuilder modelBuilder)
+        {
+
+        }
     }
 }
