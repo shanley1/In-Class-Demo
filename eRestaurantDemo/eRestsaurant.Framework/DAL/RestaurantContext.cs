@@ -32,7 +32,8 @@ namespace eRestsaurant.Framework.DAL
         // inside the following method
         protected override void OnModelICreating(DbModelBuilder modelBuilder)
         {
-
+            //modelBuilder
+                //.Entity<Reservation>
         }
     }
 }
