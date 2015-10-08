@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Admin_ManageSpecialEvents : System.Web.UI.Page
+public partial class Admin_ManageWaiters : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -13,7 +13,7 @@ public partial class Admin_ManageSpecialEvents : System.Web.UI.Page
     }
     protected void ProcessExceptions(object sender, ObjectDataSourceStatusEventArgs e)
     {
-        if(e.Exception != null)
+        if (e.Exception != null)
         {
             // We can display a message
             MessageLabel.Text = "Unable to process the request.";
