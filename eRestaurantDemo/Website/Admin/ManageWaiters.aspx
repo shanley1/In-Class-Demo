@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
     <div class="row col-md-12">
-        <h1>Manage Special Events
+        <h1>Manage Waiters
             <span class="glyphicon glyphicon-glass"></span>
         </h1>
     </div>
