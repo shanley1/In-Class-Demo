@@ -12,10 +12,36 @@ namespace eRestaurant.Framework.Entities
         [Key]
         public int LocationID { get; set; }
 
-        [Required(ErrorMessage = "A Name is required (5-50 Characters)")]
+        [Required(ErrorMessage = "A Name is required (2-50 characters)")]
+        [StringLength(50, MinimumLength = 2, ErrorMessage = "Name must be from 2 to 50 characters in length")]
         public string Name { get; set; }
 
-        [Required(ErrorMessage = "A Description is required (5-35 characters)")]
-        [StringLength(35, MinimumLength = 5, ErrorMessage = "Descriptions must be from 5 to 35 characters in length")]
+        [Required(ErrorMessage = "A Street is required (2-50 characters)")]
+        [StringLength(50, MinimumLength = 2, ErrorMessage = "Street must be from 2 to 50 characters in length")]
+        public string Street { get; set; }
+
+        [Required(ErrorMessage = "A City is required (2-35 characters)")]
+        [StringLength(35, MinimumLength = 2, ErrorMessage = "City must be from 2 to 35 characters in length")]
+        public string City { get; set; }
+
+        [Required(ErrorMessage = "A Province is required (2 characters)")]
+        [StringLength(2, MinimumLength = 2, ErrorMessage = "Province must be 2 characters in length")]
+        public string Province { get; set; }
+
+        [StringLength(50, ErrorMessage = "Contact cannot exceed 50 characters in length")]
+        public string Contact { get; set; }
+
+        [Required(ErrorMessage = "A Province is required (12 characters)")]
+        [StringLength(12, MinimumLength = 12, ErrorMessage = "Phone must be 12 characters in length")]
+        public string Phone { get; set; }
+
+        
+        [Required(ErrorMessage = "Active is required")]        
+        public bool Active { get; set; }    
+        
+        public Location()
+        {
+            Active = true;
+        }
     }
 }
