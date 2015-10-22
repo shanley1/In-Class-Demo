@@ -26,9 +26,10 @@ namespace eRestaurant.Framework.Entities
 
         [Required(ErrorMessage = "A NumberOfEmployees is required")]
         public int NumberOfEmployees { get; set; }
-        
+
         public bool Active { get; set; }
 
         [StringLength(100, ErrorMessage = "Notes cannot exceed 100 characters in length")]
-        public string Notes { get; set; }       
+        public string Notes { get; set; }
+    }
 }

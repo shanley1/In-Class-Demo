@@ -49,10 +49,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\ReportController.cs" />
+    <Compile Include="BLL\ReservationsController.cs" />
     <Compile Include="BLL\RestaurantAdminController.cs" />
     <Compile Include="BLL\TempController.cs" />
     <Compile Include="DAL\RestaurantContext.cs" />
     <Compile Include="DAL\WorkScheduleContext.cs" />
+    <Compile Include="Entities\DTOs\DailyReservation.cs" />
     <Compile Include="Entities\Bill.cs" />
     <Compile Include="Entities\BillItem.cs" />
     <Compile Include="Entities\Employee.cs" />
@@ -61,6 +63,8 @@
     <Compile Include="Entities\Location.cs" />
     <Compile Include="Entities\MenuCategory.cs" />
     <Compile Include="Entities\PlacementContract.cs" />
+    <Compile Include="Entities\POCOs\ActiveEvent.cs" />
+    <Compile Include="Entities\POCOs\Booking.cs" />
     <Compile Include="Entities\POCOs\CategoryMenuItem.cs" />
     <Compile Include="Entities\Reservation.cs" />
     <Compile Include="Entities\Schedule.cs" />
