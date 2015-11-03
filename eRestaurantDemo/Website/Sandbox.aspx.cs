@@ -1,4 +1,4 @@
-﻿using eRestsaurant.Framework.BLL;
+﻿using eRestaurant.Framework.BLL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +14,7 @@ public partial class Sandbox : System.Web.UI.Page
         {
             var controller = new TempController();
             var data = controller.ListMenuCategories();
-            //Hook the data up to the GridView
+            // Hook the data up to the GridView
             MenuCategoryGrid.DataSource = data;
             MenuCategoryGrid.DataBind();
         }

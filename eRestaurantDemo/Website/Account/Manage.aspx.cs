@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNet.Identity;
+﻿using eRestaurant.Framework.BLL.Security;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Website;
+using website;
 
 public partial class Account_Manage : System.Web.UI.Page
 {

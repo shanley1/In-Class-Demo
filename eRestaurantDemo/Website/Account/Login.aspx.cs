@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNet.Identity;
+﻿using eRestaurant.Framework.BLL.Security;
+using eRestaurant.Framework.Entities.Security;
+using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 using System;
 using System.Web;
 using System.Web.UI;
-using Website;
+using website;
 
 public partial class Account_Login : Page
 {

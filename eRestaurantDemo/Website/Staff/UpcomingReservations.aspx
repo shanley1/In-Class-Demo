@@ -4,69 +4,34 @@
     <div class="row">
         <div class="col-md-12">
             <h1>Upcoming Reservations</h1>
-
-            <asp:ObjectDataSource
-                ID="ActiveEventsDataSource"
-                runat="server" 
-                OldValuesParameterFormatString="original_{0}" 
-                SelectMethod="ListActiveEvents" 
-                TypeName="eRestaurant.Framework.BLL.ReservationsController">
-            </asp:ObjectDataSource>
-                     
-            <asp:RadioButtonList 
-                ID="ActiveEventRadioButtonList" 
-                runat="server" 
-                DataSourceID="ActiveEventsDataSource" 
-                DataTextField="Description" 
-                DataValueField="Code"
+            <asp:RadioButtonList ID="ActiveEventRadioButtonList" runat="server" 
+                DataSourceID="ActiveEventsDataSource"
                 AppendDataBoundItems="true"
-                RepeatDirection="Horizontal"
-                RepeatLayout="Flow">
-
-                <asp:ListItem 
-                    Selected="True" 
-                    Value="All"
-                    >All Events
-                </asp:ListItem>
-
-                <asp:ListItem
-                    Value="None">
-                    No Event
-                </asp:ListItem>
+                RepeatLayout="Flow" RepeatDirection="Horizontal"
+                DataTextField="Description" DataValueField="Code">
+                <asp:ListItem Selected="True" Value="All">All Events</asp:ListItem>
+                <asp:ListItem Value="None">No Events</asp:ListItem>
             </asp:RadioButtonList>
+            <asp:ObjectDataSource ID="ActiveEventsDataSource" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="ListActiveEvents" TypeName="eRestaurant.Framework.BLL.ReservationsController">
+            </asp:ObjectDataSource>
 
             <!-- Show the upcoming reservations here -->
-            <asp:Repeater
-                ID="ReservationsRepeater"
-                Runat="server"
-                DataSourceID="DailyReservationsDataSource"
-                ItemType="eRestaurant.Framework.Entity.DTOs.DailyReservation">
+            <asp:Repeater ID="ReservationsRepeater" runat="server"
+                 DataSourceID="DailyReservationsDataSource"
+                 ItemType="eRestaurant.Framework.Entities.DTOs.DailyReservation">
                 <ItemTemplate>
                     Month: <%# Item.Month %>
                     Day: <%# Item.Day %>
 
                     TODO: Display the Item.Reservations in a GridView.
                 </ItemTemplate>
-
                 <SeparatorTemplate>
                     <hr />
                 </SeparatorTemplate>
             </asp:Repeater>
-
-            <asp:ObjectDataSource
-                ID="DailyReservationsDataSource"
-                runat="server"
-                TypeName="eRestaurant.Framework.BLL.ReservationsController" 
-                OldValuesParameterFormatString="original_{0}" 
-                SelectMethod="ListUpcomingReservations">
-
+            <asp:ObjectDataSource ID="DailyReservationsDataSource" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="ListUpcomingReservations" TypeName="eRestaurant.Framework.BLL.ReservationsController">
                 <SelectParameters>
-                    <asp:ControlParameter 
-                        ControlID="ActiveEventRadioButtonList" 
-                        PropertyName="SelectedValue" 
-                        Name="eventCode" 
-                        Type="String">
-                    </asp:ControlParameter>
+                    <asp:ControlParameter ControlID="ActiveEventRadioButtonList" PropertyName="SelectedValue" Name="eventCode" Type="String"></asp:ControlParameter>
                 </SelectParameters>
             </asp:ObjectDataSource>
         </div>
