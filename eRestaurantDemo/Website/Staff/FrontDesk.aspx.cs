@@ -11,16 +11,14 @@ public partial class Staff_FrontDesk : System.Web.UI.Page
     {
 
     }
-
     protected void MockLastBillingDateTime_Click(object sender, EventArgs e)
     {
         var controller = new eRestaurant.Framework.BLL.TempController();
         var info = controller.GetLastBillDateTime();
-
-        // formatting date for use in an <input type="date" HTML5 control
+        // formatting date for use in an <input type="date"> HTML5 control
         SearchDate.Text = info.ToString("yyyy-MM-dd");
 
-        // formatting time for use in an <input type="time" HTML5 control
-        SearchTime.Text = info.ToString("HH:mm:ss");
+        // formatting time for use in an <input type="time"> HTML5 control
+        SearchTime.Text = info.ToString("HH:mm:ss"); // HH is 24 hour clock, hh is 12 hour clock
     }
 }

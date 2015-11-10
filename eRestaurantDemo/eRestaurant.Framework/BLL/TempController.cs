@@ -2,10 +2,10 @@
 using eRestaurant.Framework.Entities; // Access the namespace for my entity classes
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.ComponentModel;
 
 namespace eRestaurant.Framework.BLL
 {
@@ -15,12 +15,13 @@ namespace eRestaurant.Framework.BLL
         [DataObjectMethod(DataObjectMethodType.Select, false)]
         public DateTime GetLastBillDateTime()
         {
-            using (var context= new RestaurantContext())
+            using (var context = new RestaurantContext())
             {
-                var results = context.Bills.Max(x => x.BillDate);
-                return results;
+                var result = context.Bills.Max(x => x.BillDate);
+                return result;
             }
         }
+
 
         public List<MenuCategory> ListMenuCategories()
         {
@@ -31,5 +32,7 @@ namespace eRestaurant.Framework.BLL
                 return data.ToList();
             }
         }
+
+
     }
 }
